@@ -1,0 +1,9 @@
+[
+  {
+    "id": "2025-03-18-torchdata",
+    "title": " Tutorial: Scalable and modular data loading, 2025 edition — With Torchdata 0.10.1",
+    "date": "2025-03-18",
+    "summary": "My quick attempt to use Torchdata 0.10.1 to load data",
+    "file": "2025-03-18-torchdata.md"
+  }
+] 
