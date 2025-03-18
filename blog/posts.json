@@ -1,9 +1,9 @@
 [
   {
     "id": "2023-10-18-tokenizer-vs-tokenizer",
-    "title": "Understanding various classes of Huggingface tokenizers",
+    "title": "Tokenizer vs Tokenizer: Understanding various classes of Huggingface tokenizers",
     "date": "2023-10-18",
-    "summary": "",
+    "summary": "Since it (or they) has been so confusing..",
     "file": "2023-10-18-tokenizer-vs-tokenizer.md"
   },
   {
