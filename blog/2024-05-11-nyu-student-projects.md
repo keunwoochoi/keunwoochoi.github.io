@@ -1,4 +1,4 @@
-# Brilliant Student Projects from NYU's Deep Learning for Media Course
+# My Brilliant Students and Their Projects from NYU's Deep Learning for Media Course
 
 Teaching "Deep Learning for Media" at NYU was super fun! It was my first time teaching a course. As other people have said, it is absolutely rewarding to communicate with those curious minds, such precious gems for people like me who are working in industry.
 

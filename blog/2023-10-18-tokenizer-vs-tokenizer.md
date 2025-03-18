@@ -1,4 +1,4 @@
-# tokenizer-vs-tokenizer
+# tokenizer-vs-tokenizer: Understanding various classes of Huggingface tokenizers
 
 **Goal**: To understand different tokenizer classes by Huggingface
 
