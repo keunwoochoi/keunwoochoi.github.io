@@ -1,23 +1,31 @@
 # Tutorial: Scalable and modular data loading, 2025 edition — With Torchdata 0.10.1
 
+# 0. Prescient-FM
+
+Prescient-FM, formerly Prescient-LM, is Roche's internal foundational models initiative focused on therapeutic and biomedical applications. Our team of approximately 10 MLEs operates within Prescient Design, Genentech's Lab-in-the-Loop platform where AI-driven protein predictions are manufactured and tested in wet labs—creating a unique feedback loop between computational models and experimental validation. We're a fast-moving, flexible team that has evolved rapidly since our founding in early 2023, with strong organizational support to tackle the specialized challenges of biomedical AI.
+
+Our work spans foundational models across multiple modalities, from text-based LLMs to protein and other biological sequence models. What sets us apart is our focus on product development over publication, working directly with Roche's vast biomedical datasets and domain expertise to build models that drive real therapeutic discoveries.
+
+Given the scale of our biomedical datasets and the computational demands of training large foundational models, efficient and scalable data loading has become crucial for our work. That's exactly why we've been exploring the latest developments in torchdata—we need robust, composable data pipelines that can handle our diverse data sources and large-scale training requirements.
+
 # 1. Torchdata 0.10.1 and more
 
-Torchdata has been our choice since 2023 March, in Prescient-LM — where I have been training LLMs. It was great! It was somewhat difficult to use sometimes, it didn’t have full documentation, etc, but it worked when it worked. Then it was 2023 July when [it was officially discontinued at 0.7.0](https://github.com/pytorch/data/issues/1196). We were so sad. A year later, [the maintainers announced](https://github.com/pytorch/data/issues/1196#issuecomment-2161155825) that it will become alive again (*yes!*), with deprecating the existing approach (*hm?*) at 0.8.0, putting me into a mixed feeling. 
+Torchdata has been our choice since 2023 March, in Prescient-LM — where I have been training LLMs. It was great! It was somewhat difficult to use sometimes, it didn't have full documentation, etc, but it worked when it worked. Then it was 2023 July when [it was officially discontinued at 0.7.0](https://github.com/pytorch/data/issues/1196). We were so sad. A year later, [the maintainers announced](https://github.com/pytorch/data/issues/1196#issuecomment-2161155825) that it will become alive again (*yes!*), with deprecating the existing approach (*hm?*) at 0.8.0, putting me into a mixed feeling. 
 
-[Torchdata 0.10.1](https://pytorch.org/data/0.10/), the latest version as of 2025 Feb, is an outcome of the new approach. It has some essential implementation. I wasn’t sure if it’s ready to use yet, based on the README and the documentation. Turned out, the code is much more ready than I thought. I gave a shot, and gosh, it works! As an ENFP, my only natural action item is to write a blog post about it. 
+[Torchdata 0.10.1](https://pytorch.org/data/0.10/), the latest version as of 2025 Feb, is an outcome of the new approach. It has some essential implementation. I wasn't sure if it's ready to use yet, based on the README and the documentation. Turned out, the code is much more ready than I thought. I gave a shot, and gosh, it works! As an ENFP, my only natural action item is to write a blog post about it. 
 
 # 2. Why Torchdata
 
 As of 2025, the training data loading is a solved problem when the model and data are small. Use `torch` or something to load the model to GPU, load the data on memory, feed the data to the GPU with utilities such as [`torch.utils.data.Dataset`](https://pytorch.org/docs/stable/data.html#torch.utils.data.Dataset) and then *go* - Also, there are enough docs and examples online. 
 
-But why is it not enough? Well, let’s see why `Torchdata` exists.
+But why is it not enough? Well, let's see why `Torchdata` exists.
 
 ## Requirements
 
-> Torchdata is a library of *composable iterators* (not iterables!) that let you chain together common dataloading and pre-proc operations. It follows a streaming programming model, although “sampler + Map-style” can still be configured if you desire.
+> Torchdata is a library of *composable iterators* (not iterables!) that let you chain together common dataloading and pre-proc operations. It follows a streaming programming model, although "sampler + Map-style" can still be configured if you desire.
 > 
 > 
-> `torchdata.nodes` adds more flexibility to the standard `torch.utils.data` offering, and introduces multi-threaded parallelism in addition to multi-process (the only supported approach in `torch.utils.data.DataLoader`), as well as first-class support for mid-epoch checkpointing through a `state_dict/load_state_dict` interface.
+> `torchdata.nodes` adds more flexibility to the standard `torch.utils.data` offering, and introduces multi-threaded parallelism in addition to multi-process (the only supported approach in `torch.utils.data.DataLoader`), as well as first-class support for mid-epoch checkpointing through a `state_dict/load_state_dict` interface.
 > 
 
 In other words, the existing `torch.utils.data.Dataset` is not ideal if -
@@ -30,21 +38,21 @@ Often, this may means:
 
 - Since you have too much data (yes!), you need to load it from remote (s3 bucket, for example)
 - Likewise, model is big and you definitely need multi-gpu and multi-node training
-- You’d hate latencies. Some nice features like prefetch is nearly necessary
+- You'd hate latencies. Some nice features like prefetch is nearly necessary
 - Therefore, more cpu & network to use for the real-time data processing
 - Therefore of therefore, you want to control multiprocessing and multithreading nicely
 
-Now we’re talking about large-scale training, where you’d like to ensure everything is fine. One requirement may be:
+Now we're talking about large-scale training, where you'd like to ensure everything is fine. One requirement may be:
 
 - Resume training from exactly where we were
 
-## Can’t we do this with `Dataset` and `DataLoader`?
+## Can't we do this with `Dataset` and `DataLoader`?
 
-Technically, almost everything is possible except some limitation on multithreading. Perhaps that’s optional and you could just do it with `Dataset` and `IterableDataset`. But it would be cumbersome, and as Homo Sapiens, we aspire to find better tools. 
+Technically, almost everything is possible except some limitation on multithreading. Perhaps that's optional and you could just do it with `Dataset` and `IterableDataset`. But it would be cumbersome, and as Homo Sapiens, we aspire to find better tools. 
 
 # 3. Example
 
-I’ll show you the `Node` classes I’m using now. This is the data / functional flow for a dataset I use.
+I'll show you the `Node` classes I'm using now. This is the data / functional flow for a dataset I use.
 
 ```bash
 [list files] -> .jsonl files -> [load jsonl] ->  json dict -> [text processor] -> processed and rendered text -> [tokenizer] -> token ids -> [pack it or trim it] --> token ids -> [batching] -> batch of token ids -> [end of data loader]
@@ -52,7 +60,7 @@ I’ll show you the `Node` classes I’m using now. This is the data / functiona
 
 ## Basic `io`
 
-Based the provided nodes and the README under `torchdata.nodes` , here’s some basic custom nodes I wrote. First, `LocalFileListNode` .
+Based the provided nodes and the README under `torchdata.nodes` , here's some basic custom nodes I wrote. First, `LocalFileListNode` .
 
 ```python
 import json
@@ -105,7 +113,7 @@ class LocalFileListNode(BaseNode[str]):
 - `reset()` and `get_state()` are useful for stateful data loading, checkpointing, and resuming.
 - `next()` is the core! This method defines how this node as an iterator would work. Based on the files we found in `reset()`, the iterator will output the file path one by one.
 
-Let’s move on and build the json loader.
+Let's move on and build the json loader.
 
 ```python
 class JsonLinesReaderNode(BaseNode[Dict]):
@@ -219,11 +227,11 @@ class ParquetReaderNode(BaseNode[Dict]):
         }
 ```
 
-It’s really the same idea, I’ll skip the explanation.
+It's really the same idea, I'll skip the explanation.
 
 ## Advanced Processing
 
-Later in the pipeline, we’ll need to tokenize the text. This is rather a simple example. 
+Later in the pipeline, we'll need to tokenize the text. This is rather a simple example. 
 
 ```python
 class TokenizeNode(BaseNode[Dict]):
@@ -415,9 +423,9 @@ This is it! It works!
 
 Even after skipping some of the custom node classes, this example already involves quite a few preprocessing nodes. Imagine you have 10 different (heterogenous (..messy!)) data sources. Once you have all the essential and modular nodes, the heterogeneity is not a problem — as opposed to implementing 10 different `Dataset` classes.
 
-The `Loader` class already works, but it is minimal. Torchdata also has a `StatefulDataLoader` and it is supposed to work with `Node`, but I had some issue with it. I’m sure that it will be fixed and improved in the next versions though. According to their design principle, `Node` should also work with `torch.utils.data.DataLoader` . But as of now, this seems to be implemented later.
+The `Loader` class already works, but it is minimal. Torchdata also has a `StatefulDataLoader` and it is supposed to work with `Node`, but I had some issue with it. I'm sure that it will be fixed and improved in the next versions though. According to their design principle, `Node` should also work with `torch.utils.data.DataLoader` . But as of now, this seems to be implemented later.
 
-I didn’t have it in this example, but `Prefetcher` Node is already implemented too. I skipped it because I also had an issue with it with the current version. Currently, it is based on a single-threaded mapper. They would have a good reason but I’m not sure why exactly.
+I didn't have it in this example, but `Prefetcher` Node is already implemented too. I skipped it because I also had an issue with it with the current version. Currently, it is based on a single-threaded mapper. They would have a good reason but I'm not sure why exactly.
 
 The `torchdata.nodes.Mapper` is — like all the other provided nodes — single-threaded. For parallel processing, check out `torchdata.nodes.ParallelMapper` . 
 
