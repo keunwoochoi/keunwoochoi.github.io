@@ -1,5 +1,12 @@
 [
   {
+    "id": "2025-06-11-talkplay-demo",
+    "title": "TalkPlay Demo at NY MusicTech Meetup",
+    "date": "2025-06-11",
+    "summary": "Presenting TalkPlay, a music recommendation system that uses large language models to generate personalized song recommendations",
+    "file": "2025-06-11-talkplay-demo.md"
+  },
+  {
     "id": "2025-06-05-training-internal-llms",
     "title": "Featured in Neptune.ai's State of Foundation Model Training Report 2025",
     "date": "2025-06-05",
