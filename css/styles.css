@@ -21632,3 +21632,8 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+/* Previous job titles styling - more gray to distinguish from current positions */
+.job-title-previous {
+  color: #6b7280 !important;
+}
