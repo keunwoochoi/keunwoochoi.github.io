@@ -12,7 +12,7 @@ They have a receptive field of 30 seconds; longer signals are simply split into 
 
 It's really interesting that not padding the audio to 30s resulted in performance degradation; hence short audios are always zero-padded. In 5.1, it shows the word error rate (in ASR) — not padding is slightly worse in French (but not in English). See the image below.
 
-![Voxtral ASR performance with and without padding](Fig7.png)
+![Voxtral ASR performance with and without padding](img/voxtral/Fig7.png)
 
 Based on this, I actually suspect something was wrong with the "FLEURS fr" run in the "Not padded" case during the experiment. I'm sure the authors also suspected all of these, but:
 
@@ -52,7 +52,7 @@ which is...
 
 That's 2.5 to 3.3 words, or just the middle: 2.9 words/second. Applying the general rule of thumb of a single word = 1.3 tokens, it translates to 3.77 tokens/second. 
 
-![Effect of Downsampling](Fig8.png)
+![Effect of Downsampling](img/voxtral/Fig8.png)
 
 Let's look at the graph again. On Llama QA, the final performance is ranked as 12.5 Hz > 6.25 Hz > 50 Hz > 25 Hz. Again, this is quite noisy, and why should we only take the final performance as the true evaluation? But after enough training, 12.5 Hz shows a good lead, so okay. Then we have this question: well, 12.5 Hz is 8 timesteps per second — which is way over 3.77 tokens per second. 6.25 Hz is rather much closer to that.
 
