@@ -4,25 +4,27 @@ As a proud author of [an unsolicited and successful (correlation or causation?) 
 
 ---
 
-## Hayoung's show
+## 1. Most importantly, Hayoung's show!
 
 [Hayoung Lyou](https://maps.app.goo.gl/32BrP6RZnPaGz5fu8)([@hayounglyou_](https://www.instagram.com/hayounglyou_/)) will play at..
   - Banjul, 9/19 Fri: Free improvisation in a piano duo / in a trio setup with bass and vocal.
   - SoundDog, 9/25 Thu: Jazz Piano Trio
 
 
-## Jazz Venues
+## 2. Jazz Venues
 
 The jazz scene in Korea is actually booming in 2025. Totally different from even 5 years ago! 
 
 ### **사운드독 (Sounddog)**  
 [@sounddog_jazz](https://www.instagram.com/sounddog_jazz/) | [Huam Traditional Market, Yongsan](https://goo.gl/maps/2yYFfJXcA4o3nq7N6) | [YouTube](https://www.youtube.com/@jazzliveclubsounddog1257)
+
 Daily shows with a cozy, artist-centered vibe. One of the few places where any jazz musicians can play their originals. I also see Sounddog as a K-version of Smalls, the now legendary jazz venue in NYC. Highly recommended. It doesn't have any established booking system, you just need to text the owner to book the ticket. Check out their youtube! They livestream everything, every day. 
 
 ---
 
 ### **클럽 에반스 (Club Evans)**  
 [@evansjazzclub](https://www.instagram.com/evansjazzclub/) | [Hongdae Area](https://share.google/9m1hHRwPHaKDAiy7r)  
+
 Seoul’s most famous jazz club, known for its nightly jam sessions and professional lineups. It's in the Hongdae area which can be fun for other reasons. 
 
 ---
@@ -35,11 +37,12 @@ A welcoming stage where fresh jazz musicians cut their teeth alongside relaxed l
 
 ### **카인드서울 (Kind Seoul)**  
 [@kindseoul_official](https://www.instagram.com/kindseoul_official) | [Seongsu](https://maps.app.goo.gl/6e81Mjj3D7A3EBbf7)  
+
 Live jazz meets craft beer in Seongsu! Check their calendar before heading over. Seongsu area is the newest and the hippest area. 
 
 ---
 
-## 자유즉흥 • Experimental & Cross-Genre Venues
+## 3. Experimental & Cross-Genre Venues • 자유즉흥 
 
 First of all, you should track performances via [Seoul Experimental](https://www.seoulexperiment
 al.com). 
@@ -61,7 +64,7 @@ A "lab" for sound. Think avant-garde performances, listening sessions, experimen
 ---
 
 ### **피크닉 (Picnic)**  
-[@picnic.kr](https://www.instagram.com/piknic.kr/) | [Close to Seoul Station](https://maps.app.goo.gl/WPPmT5PnXEExcYxF9)  
+[@picnic.kr](https://www.instagram.com/piknic.kr/) | [Near Seoul Station](https://maps.app.goo.gl/WPPmT5PnXEExcYxF9)  
 Eclectic performances where art, music, and performance blend effortlessly.
 
 ---
@@ -97,7 +100,7 @@ A former embassy-turned-gallery, offering occasional performances in an evocativ
 
 ---
 
-##  Upcoming Highlight: Seoul Forest Jazz Festival 2025
+## 3. Upcoming Highlight: Seoul Forest Jazz Festival 2025
 
 - [@seoulforestjazz](https://www.instagram.com/seoulforestjazz/), Sep 19 - 21.
 - Seoul Forest Park, Seongdong District
