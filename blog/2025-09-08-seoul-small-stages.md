@@ -44,8 +44,7 @@ Live jazz meets craft beer in Seongsu! Check their calendar before heading over.
 
 ## 3. Experimental & Cross-Genre Venues • 자유즉흥 
 
-First of all, you should track performances via [Seoul Experimental](https://www.seoulexperiment
-al.com). 
+First of all, you should track performances via [Seoul Experimental](https://www.seoulexperimental.com). 
 
 > Seoul Experimental is a community calendar for experimental, improvised, free jazz, multidisciplinary, electronic, noise, and otherwise interesting music events in and around Seoul.
 
