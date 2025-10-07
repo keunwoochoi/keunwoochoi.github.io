@@ -316,3 +316,8 @@ h3.blog-title a.blog-title-link {
     font-size: 0.9rem;
     color: #333;
 } 
+
+/* Talks page narrower container */
+.talks-container {
+    max-width: 920px;
+}
