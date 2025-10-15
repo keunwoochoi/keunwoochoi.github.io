@@ -50,10 +50,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             // Render the markdown content without adding the title again
-            document.getElementById('post-content').innerHTML = marked.parse(markdown);
-            
+            const postEl = document.getElementById('post-content');
+            postEl.innerHTML = marked.parse(markdown);
+
             // Apply Prism.js highlighting to any code blocks
             Prism.highlightAll();
+
+            // Initialize Twitter embeds if widgets.js is present
+            if (window.twttr && window.twttr.widgets && typeof window.twttr.widgets.load === 'function') {
+                window.twttr.widgets.load(postEl);
+            }
         })
         .catch(error => {
             console.error('Error loading blog post:', error);
