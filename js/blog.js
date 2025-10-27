@@ -52,19 +52,20 @@ function displayBlogPosts(posts) {
     posts.forEach(post => {
         const postDate = new Date(post.date).toLocaleDateString('en-US', {
             year: 'numeric',
-            month: 'long',
+            month: 'short',
             day: 'numeric'
         });
         
         postsHTML += `
-            <div class="blog-post-preview mb-5">
-                <h3 class="mb-0 blog-title" style="text-transform: none !important;">
-                    <a href="post.html?id=${post.id}" class="blog-title-link" style="text-transform: none !important;">${post.title}</a>
-                    <small class="text-muted ml-2">${postDate}</small>
-                </h3>
-                ${post.summary ? `<p class="mt-2">${post.summary}</p>` : ''}
+            <div class="blog-post-preview">
+                <div class="blog-post-date">${postDate}</div>
+                <div class="blog-post-content">
+                    <h3 class="blog-title" style="text-transform: none !important;">
+                        <a href="post.html?id=${post.id}" class="blog-title-link" style="text-transform: none !important;">${post.title}</a>
+                    </h3>
+                    ${post.summary ? `<p class="blog-summary">${post.summary}</p>` : ''}
+                </div>
             </div>
-            <hr class="m-0 mb-5">
         `;
     });
     
