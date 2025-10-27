@@ -101,7 +101,7 @@ Now I'm stealing another General Co-Chair Dasaem's thunder by mentioning this, s
 
 I still listen to the playlist Dasaem created after the conference. Also available in [Apple Music](https://music.apple.com/kr/playlist/baraji-ismir2025/pl.u-76oNlPmIqyA4Wd). 
 
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1YuiMfElyz7VVw2kD6P1wP?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1YuiMfElyz7VVw2kD6P1wP?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ### Knowledge Sharing for the Future Conferences
 
