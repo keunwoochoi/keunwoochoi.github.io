@@ -205,6 +205,15 @@
     border: 0;
 }
 
+/* Keep YouTube embeds responsive but cap their max width to 560px */
+#post-content iframe[src*="youtube.com"],
+#post-content iframe[src*="youtube-nocookie.com"] {
+    max-width: 560px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 1.5rem auto; /* center horizontally */
+}
+
 #post-content pre {
     background-color: #f8f9fa;
     padding: 1rem;
