@@ -29,7 +29,7 @@ See? I told you they're so real. And here's my thought, re-thought and re-phrase
 
 This has been a recurring question at least in the last 10 years in ML, which validates the importance. Let me separate this into two questions.
 
-#### Q1.1 PhD vs. Industry**
+### Q1.1 PhD vs. Industry
 
 You have to adjust the selection bias. Surely there are people who really achieved a lot, such as papers in top conferences and impactful products, perhaps even first-authored, while getting paid $$$$$$. 
 

@@ -366,3 +366,13 @@ h3.blog-title a.blog-title-link {
 .talks-container {
     max-width: 920px;
 }
+
+/* Blog post content max width for better readability */
+#blog-post .resume-section-content {
+    max-width: 750px;
+}
+
+/* Blog list page max width */
+#blog .resume-section-content {
+    max-width: 850px;
+}
