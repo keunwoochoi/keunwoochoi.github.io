@@ -1,4 +1,4 @@
-# Roffice Hour Q1.1: PhD vs. Industry
+# Roffice Hour Q1.1: Doing a PhD vs. Getting a job in industry (and make real money)
 
 ## Students
 
@@ -31,9 +31,11 @@ This has been a recurring question at least in the last 10 years in ML, which va
 
 ### Q1.1 PhD vs. Industry
 
-You have to adjust the selection bias. Surely there are people who really achieved a lot, such as papers in top conferences and impactful products, perhaps even first-authored, while getting paid $$$$$$. 
+"Why do I need to live like ~shit~ *a student* for another 5 years, instead of making money and prosper?"
 
-But they are outliers. In reality, PhD programs and companies are totally different, unlike the impression you get when you see some papers published from industry. 
+First, you have to adjust the selection bias. Surely there are people who really achieved a lot, such as papers in top conferences and impactful products, perhaps even first-authored, while getting paid $$$$$$. 
+
+They are outliers. In reality, PhD programs and companies are totally different, unlike the impression you get when you see some papers published from industry. 
 
 - **Growth**: No matter how you feel chased during a PhD program, you're there to take your time (years indeed) and grow. You don't have to prove yourself before getting in, or within a quarter or two. I know the bar to get accepted to a PhD program is higher these days, but my point is not about how high or low the bar to join. The bar to graduate is way, way higher than the bar to start a PhD program! Conversely, companies hire people, expecting them to perform at a certain level immediately. They hire to *use* you, and that's your price (salary). As a hiring manager, I tried my best to take potential into account too, but it was very challenging. It's risky, and it's tough to convince others too. 
 
