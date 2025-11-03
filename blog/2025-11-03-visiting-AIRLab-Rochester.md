@@ -6,7 +6,7 @@ Visiting a university lab has been such fun, immediately after I left university
 
 The realness makes it energizing to simply talk to them. That's why I volunteered to meet with the students in the [Audio Information Research (AIR) Lab in University of Rochester](https://labsites.rochester.edu/air/).
 
-I ran a group office hour for ~1.5 hours. I've done something similar at [National Taiwan University, Yi-Hsuan Yang's lab](https://affige.github.io), and of course my dearest [MAC Lab at KAIST](https://mac.kaist.ac.kr/~juhan/). Each visit is interesting. The circumstances such as the academic / industrial landscapes are different, students are different, and so am I. In this post, I'd like to share the perspectives I shared at Rochester last week.
+I ran a group office hour for about 1.5 hours. I've done something similar at [National Taiwan University, Yi-Hsuan Yang's lab](https://affige.github.io), and of course my dearest [MAC Lab at KAIST](https://mac.kaist.ac.kr/~juhan/). Each visit is interesting. The circumstances such as the academic / industrial landscapes are different, students are different, and so am I. In this post, I'd like to share the perspectives I shared at Rochester last week.
 
 ![Keunwoo at AIR Lab](blog/img/airlab/keunwoo-at-AIR.jpeg)
 
