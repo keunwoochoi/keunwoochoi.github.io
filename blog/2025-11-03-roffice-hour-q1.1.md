@@ -1,4 +1,4 @@
-# Roffice Hour Q1.1: Doing a PhD vs. Getting a job in industry (and make real money)
+# Roffice Hour Q1.1: Doing a PhD vs. Getting a job in industry (and making real money)
 
 ## Students
 
