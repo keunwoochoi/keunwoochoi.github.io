@@ -1,5 +1,7 @@
 # Roffice Hour Q2: Making a Narrative for Your Thesis
 
+> How can I unify multiple projects for my PhD thesis [when they're a bit too diverse]?
+
 I don't know how general this problem is, but I could related. I also have no idea how others' situations look like, so this post will use my PhD student days as an example.
 
 I started my PhD 2014 Oct. 3 years later, when I was starting working on my thesis, well, I was lucky to have several papers. But they also looked scattered rather than linear. They were:
