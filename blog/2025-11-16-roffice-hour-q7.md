@@ -46,7 +46,7 @@ And that's how I joined Genentech, to train LLMs.
 
 ## Genentech.
 
-I won't rewrite a summary of [my time at Genentech](2025-10-15-leaving-genentech.md).
+I won't rewrite a summary of [my time at Genentech](https://keunwoochoi.github.io/post.html?id=2025-10-15-leaving-genentech).
 
 ## Ok, so what?
 
