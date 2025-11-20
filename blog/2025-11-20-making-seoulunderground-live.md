@@ -1,4 +1,4 @@
-# making seoulunderground.live
+# Making seoulunderground.live
 
 My freedom started after my last day at Genentech, Oct 10. Everything has a price tag, so I decided to pay for my freedom by vibecoding for free. The equation is not working quite well, because Cursor is not free.. But I did it anyway. 
 
