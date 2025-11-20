@@ -132,6 +132,9 @@ NYC is not like that! That means.. that means my big beautiful ETL is not enough
 **Deployment**:
 - CI for all the tests / test deployment for the frontend
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nKXngh0PuJo?si=GbWIPHclHd7A2ZzA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 ## Future Works
 
 I learned a lot by doing all of these by myself! A full-cycle of product that requires a multi-dimensional thoughts, concerns, developments, reviews, repeats. I could finish this and refine the product to the current state because I really care. Jazz fans in Korea are really using my service, and I'm so proud of this already.
