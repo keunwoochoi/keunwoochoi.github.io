@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-03-26-undr.live-2-product",
+    "title": "undr.live — My Jazz Product, Four Months Later",
+    "date": "2026-03-26",
+    "summary": "Domain rename, expansion experiments, auto IG posting, musician DB, and what I learned.",
+    "file": "2026-03-26-undr.live-2-product.md"
+  },
+  {
     "id": "2025-11-20-making-seoulunderground-live",
     "title": "Making seoulunderground.live",
     "date": "2025-11-20",
@@ -139,4 +146,4 @@
     "summary": "My quick attempt to use Torchdata 0.10.1 to load data",
     "file": "2025-03-18-torchdata.md"
   }
-] 
+]
