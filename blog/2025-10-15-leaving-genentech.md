@@ -37,7 +37,7 @@ I have no regrets about this decision. Things look good, and I would still leave
 
 ## What am I doing?
 
-I'm simply enjoying the current status of zero commitment! I talk to a lot of people in various industries / start-ups. I allocate more time to working with KAIST folks. I'm programming even more than before, and it's so nice to have a whole day for anything I'm excited about! And in general, a lot more of [TalkPlay](https://talkpl.ai), [Hayoung Lyou ❤️](https://www.hayounglyou.com), books, Diablo 2 Resurrected, workouts, music. This sabbatical has a price tag, and it's not cheap because for now, I can only estimate the opportunity cost. But its value is being defined by myself, just like the stats and the skill tree of my amazing Sorceress; therefore, I'm trying my best. Please wish me good luck! 
+I'm simply enjoying the current status of zero commitment! I talk to a lot of people in various industries / start-ups. I allocate more time to working with KAIST folks. I'm programming even more than before, and it's so nice to have a whole day for anything I'm excited about! And in general, a lot more of [TalkPlay](https://talkpl-ai.github.io), [Hayoung Lyou ❤️](https://www.hayounglyou.com), books, Diablo 2 Resurrected, workouts, music. This sabbatical has a price tag, and it's not cheap because for now, I can only estimate the opportunity cost. But its value is being defined by myself, just like the stats and the skill tree of my amazing Sorceress; therefore, I'm trying my best. Please wish me good luck! 
 
 
 2025-10-15, Keunwoo Choi.

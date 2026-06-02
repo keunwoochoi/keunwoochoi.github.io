@@ -1,12 +1,12 @@
 # Demoing TalkPlay: An LLM for Music Recommendation at NY MusicTech Meetup
 
-I had a blast presenting [TalkPlay](https://talkpl.ai) at the [NY MusicTech Meetup](https://www.meetup.com/music-techster/) back in March. It was one of those presentations where everything clicked – engaging audience, great questions, and super fun. For those who missed it, the amazing organizer and volunteers recorded the whole thing:
+I had a blast presenting [TalkPlay](https://talkpl-ai.github.io) at the [NY MusicTech Meetup](https://www.meetup.com/music-techster/) back in March. It was one of those presentations where everything clicked – engaging audience, great questions, and super fun. For those who missed it, the amazing organizer and volunteers recorded the whole thing:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pgevqDNIIqM?si=3cCO19qbM853jUMt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Fair warning: it's got that authentic demo energy where things are live, real, and sometimes a bit messy – exactly how I like it!
 
-# What is [TalkPlay](https://talkpl.ai)?
+# What is [TalkPlay](https://talkpl-ai.github.io)?
 
 TalkPlay is, simply put, an LLM specifically trained for music recommendation. But let me back up and explain *why* this matters.
 
