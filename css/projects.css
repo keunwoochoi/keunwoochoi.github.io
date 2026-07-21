@@ -1,0 +1,236 @@
+/* ==========================================================================
+   Projects gallery.
+
+   Palette, type and paper are inherited from the blog reading styles so the
+   two pages read as one site. The one device specific to this page is the
+   monospace meta strip on each card: kind · when · a real number. It encodes
+   what sort of artifact each project is and whether it's still alive, which
+   is the thing that actually differs across them.
+   ========================================================================== */
+
+:root {
+    --paper:  #fbfaf7;
+    --card:   #ffffff;
+    --ink:    #2b2926;
+    --ink-hi: #1a1815;
+    --muted:  #7a736a;
+    --accent: #b0512c;
+    --rule:   #ebe7df;
+}
+
+body.projects-page {
+    background-color: var(--paper);
+}
+
+#projects .resume-section-content {
+    max-width: 1000px;
+    min-width: 0; /* flex child must be allowed to shrink below content width */
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+}
+
+.projects-title {
+    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 1.15;
+    color: var(--ink-hi);
+    text-transform: none !important;
+    margin: 0 0 .5rem;
+}
+
+.projects-intro {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 46ch;
+    margin: 0 0 3rem;
+}
+
+/* --- card ---------------------------------------------------------------- */
+
+.project {
+    display: flex;
+    flex-direction: column;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.project:hover,
+.project:focus-visible {
+    text-decoration: none;
+    color: inherit;
+    border-color: #d8cfc2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(43, 41, 38, .07);
+}
+
+.project:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.project-shot {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top center;
+    background: #12131a;
+    border-bottom: 1px solid var(--rule);
+}
+
+/* Kapre's art is a 3:1 banner — contain it on its own dark plate rather than
+   cropping the wordmark in half. */
+.project-shot--plate {
+    object-fit: contain;
+    object-position: center;
+    background: #0b0e18;
+}
+
+/* Body fills the remaining height so the meta strip lands on the same
+   baseline across a row, whatever the description length. */
+.project-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.15rem 1.3rem 1.35rem;
+}
+
+.project-body .project-meta {
+    margin-top: auto;
+    padding-top: .25rem;
+}
+
+.project-name {
+    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    line-height: 1.25;
+    color: var(--ink-hi);
+    text-transform: none !important;
+    margin: 0 0 .5rem;
+    display: inline-block;
+    position: relative;
+}
+
+.project-name::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -2px;
+    height: 1px;
+    background: var(--accent);
+    transition: right .25s ease;
+}
+
+.project:hover .project-name::after,
+.project:focus-visible .project-name::after {
+    right: 0;
+}
+
+.project-desc {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0 0 .9rem;
+}
+
+/* The signature: real numbers, in the same mono the blog sets code in. */
+.project-meta {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: .78rem;
+    letter-spacing: .01em;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    align-items: baseline;
+}
+
+.project-meta span:not(:last-child)::after {
+    content: " ·";
+    color: #c9c1b5;
+}
+
+.project-meta .live {
+    color: var(--accent);
+}
+
+/* --- lead card ----------------------------------------------------------- */
+
+.project--lead {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    margin-bottom: 1.75rem;
+}
+
+.project--lead .project-shot {
+    height: 100%;
+    aspect-ratio: auto;
+    min-height: 300px;
+    border-bottom: 0;
+    border-right: 1px solid var(--rule);
+}
+
+.project--lead .project-body {
+    align-self: center;
+    padding: 1.75rem 1.9rem;
+}
+
+.project--lead .project-name {
+    font-size: 1.9rem;
+}
+
+.project--lead .project-desc {
+    font-size: 1.05rem;
+}
+
+/* --- grid ---------------------------------------------------------------- */
+
+/* Two up. Four projects land as a clean 2x2 instead of 3 + an orphan.
+   The min() keeps the 400px floor from overflowing screens narrower than it. */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
+    gap: 1.75rem;
+}
+
+@media (max-width: 767px) {
+    .project--lead {
+        grid-template-columns: 1fr;
+    }
+    .project--lead .project-shot {
+        aspect-ratio: 16 / 10;
+        min-height: 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--rule);
+    }
+    .project--lead .project-body {
+        padding: 1.15rem 1.3rem 1.35rem;
+    }
+    .project--lead .project-name {
+        font-size: 1.35rem;
+    }
+    .projects-title {
+        font-size: 1.9rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project,
+    .project-name::after {
+        transition: none;
+    }
+    .project:hover,
+    .project:focus-visible {
+        transform: none;
+    }
+}
