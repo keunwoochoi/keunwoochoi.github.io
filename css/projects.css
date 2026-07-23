@@ -3,9 +3,9 @@
 
    Palette, type and paper are inherited from the blog reading styles so the
    two pages read as one site. The one device specific to this page is the
-   monospace meta strip on each card: kind · when · a real number. It encodes
-   what sort of artifact each project is and whether it's still alive, which
-   is the thing that actually differs across them.
+   monospace meta strip on each card: a kind label and a year, separated by
+   space (no punctuation). It says what sort of artifact each project is and
+   when it lived.
    ========================================================================== */
 
 :root {
@@ -132,15 +132,25 @@ body.projects-page {
     margin: 0 0 .9rem;
 }
 
-/* Kind label: one stable word for what each project is, set in the same mono
-   the blog uses for code. Uppercased and tracked out so it reads as a category
-   tag rather than leftover body text. */
+/* Kind label + year as a lowercase monospace footer row — kind slug at the
+   left edge, year at the right, no punctuation between them. Lowercase and
+   untracked on purpose, to read like a code slug rather than a tracked-out
+   uppercase tag. */
 .project-meta {
     font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-    font-size: .72rem;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: var(--muted);
+    font-size: .8rem;
+    letter-spacing: 0;
+    text-transform: lowercase;
+    color: #7a736a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.project-meta span:last-child {
+    color: #a49c90;
+    flex: none;
 }
 
 /* --- lead card ----------------------------------------------------------- */
