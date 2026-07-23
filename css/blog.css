@@ -533,3 +533,11 @@ h3.blog-title a.blog-title-link {
     font-size: 1rem;
     line-height: 1.55;
 }
+/* The blog list's own section title ("Blog") keeps the site's shared
+   section-title template — Saira Extra Condensed, uppercase — matching
+   About / Experience / Music. The blanket #blog text-transform:none override
+   above (which un-uppercases post headings) would otherwise lowercase it, so
+   restore uppercase here with higher specificity (two classes vs one). */
+#blog .resume-section-content > h2.mb-5 {
+    text-transform: uppercase !important;
+}

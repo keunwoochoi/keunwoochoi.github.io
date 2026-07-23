@@ -30,24 +30,9 @@ body.projects-page {
     -webkit-font-smoothing: antialiased;
 }
 
-.projects-title {
-    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 2.2rem;
-    line-height: 1.15;
-    letter-spacing: -.02em;
-    color: var(--ink-hi);
-    text-transform: none !important;
-    margin: 0 0 2rem;
-}
-
-.projects-intro {
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: var(--muted);
-    max-width: 46ch;
-    margin: 0 0 3rem;
-}
+/* The "Projects" heading is a plain <h2 class="mb-5">, styled by the site's
+   shared section-title template (Saira Extra Condensed, uppercase, 3.5rem) so
+   it matches About / Experience / Music. No page-specific override here. */
 
 /* --- card ---------------------------------------------------------------- */
 
@@ -161,7 +146,7 @@ body.projects-page {
 .project--lead {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    margin-bottom: 1.75rem;
+    margin-bottom: 3rem;
 }
 
 .project--lead .project-shot {
@@ -177,9 +162,8 @@ body.projects-page {
     padding: 1.75rem 1.9rem;
 }
 
-/* The featured card leads the page, so its title is set at headline scale —
-   larger than the "Projects" label above it — to take first focus. The wide
-   layout and this size are the only "featured" signal; there's no label. */
+/* The featured card leads the page, so its title is the largest card title —
+   the wide layout and this size are the only "featured" signal; no label. */
 .project--lead .project-name {
     font-size: 2.5rem;
     line-height: 1.1;
@@ -198,7 +182,8 @@ body.projects-page {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
-    gap: 1.75rem;
+    column-gap: 1.75rem;
+    row-gap: 3rem;
 }
 
 @media (max-width: 767px) {
