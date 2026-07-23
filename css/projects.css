@@ -72,12 +72,14 @@ body.projects-page {
     border-bottom: 1px solid var(--rule);
 }
 
-/* Kapre's art is a 3:1 banner — contain it on its own dark plate rather than
-   cropping the wordmark in half. */
+/* Kapre's art is a 3:1 banner — contain it (rather than crop the wordmark in
+   half) on the same warm gray as the logo tiles, so its letterbox bars match
+   the rest of the grid. The logo tiles fill their frame exactly, so this
+   background only shows on Kapre. */
 .project-shot--plate {
     object-fit: contain;
     object-position: center;
-    background: #0b0e18;
+    background: #4f4a43;
 }
 
 /* Body fills the remaining height so the meta strip lands on the same
