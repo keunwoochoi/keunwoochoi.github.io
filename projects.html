@@ -12,7 +12,7 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <!-- Projects gallery styles -->
@@ -56,29 +56,30 @@
             <section class="resume-section" id="projects">
                 <div class="resume-section-content">
                     <h1 class="projects-title">Projects</h1>
-                    <p class="projects-intro">Things I built and things I wrote. Most of them are still running.</p>
 
-                    <!-- Lead: the one that's alive right now -->
+                    <!-- Featured lead card. This is a hand-placed choice, NOT automatic:
+                         nothing detects the newest project. undr.live gets the wide slot
+                         because it's the one still actively running (updated daily). To
+                         feature a different project, move that <a> here and give it the
+                         `project--lead` class; drop undr.live back into .project-grid below.
+                         The grid is a 2x2; keeping exactly one card in the lead keeps the
+                         remaining four even. -->
                     <a class="project project--lead" href="https://undr.live/" target="_blank" rel="noopener">
                         <img class="project-shot" src="assets/img/projects/undr-live.jpg" alt="undr.live showing a week of Seoul jazz shows in a dense table" />
                         <div class="project-body">
                             <h2 class="project-name">undr.live</h2>
-                            <p class="project-desc">Jazz listings for Seoul. It reads about 100 venue Instagram accounts every night, pulls the show details out of the posters with a vision model, and publishes the schedule. Nobody types anything in — including me.</p>
-                            <p class="project-meta">
-                                <span>service</span><span>seoul jazz</span><span class="live">updated daily</span>
-                            </p>
+                            <p class="project-desc">Jazz listings for Seoul. It reads about 100 venue Instagram accounts every night, pulls the show details out of the posters with a vision model, and publishes the schedule.</p>
+                            <p class="project-meta"><span>web service</span></p>
                         </div>
                     </a>
 
                     <div class="project-grid">
                         <a class="project" href="https://keunwoochoi.github.io/beetbox-eval/" target="_blank" rel="noopener">
-                            <img class="project-shot" src="assets/img/projects/beetbox.jpg" alt="Beetbox Model Arena comparing two model reconstructions side by side" />
+                            <img class="project-shot project-shot--plate" src="assets/img/projects/eval-arena.png" alt="Beetbox Eval Arena logo" />
                             <div class="project-body">
-                                <h2 class="project-name">Beetbox Model Arena</h2>
-                                <p class="project-desc">Ten coding-agent runs were given the same drum-sequencer reference and asked to rebuild it. Play any two against each other, or against the original.</p>
-                                <p class="project-meta">
-                                    <span>study</span><span>10 implementations</span>
-                                </p>
+                                <h2 class="project-name">Eval Arena</h2>
+                                <p class="project-desc">Coding agents were each given the same drum-sequencer reference and asked to rebuild it. Play any two against each other, or against the original.</p>
+                                <p class="project-meta"><span>experiment</span></p>
                             </div>
                         </a>
 
@@ -87,31 +88,25 @@
                             <div class="project-body">
                                 <h2 class="project-name">Kapre</h2>
                                 <p class="project-desc">Audio preprocessing as Keras layers. STFT, melspectrogram and friends compute on the GPU inside your model, so training and serving run the same graph instead of two that drift apart.</p>
-                                <p class="project-meta">
-                                    <span>python package</span><span>947★</span><span>v0.4.1</span>
-                                </p>
+                                <p class="project-meta"><span>open-source library</span></p>
                             </div>
                         </a>
 
                         <a class="project" href="https://music-classification.github.io/tutorial" target="_blank" rel="noopener">
-                            <img class="project-shot" src="assets/img/projects/music-classification.jpg" alt="Music Classification web book title page" />
+                            <img class="project-shot project-shot--plate" src="assets/img/projects/music-classification.png" alt="Music Classification tutorial logo" />
                             <div class="project-body">
-                                <h2 class="project-name">Music Classification</h2>
+                                <h2 class="project-name">Music Classification Tutorial</h2>
                                 <p class="project-desc">A web book on music classification beyond supervised learning, written with co-authors and taught as the ISMIR 2021 tutorial.</p>
-                                <p class="project-meta">
-                                    <span>web book</span><span>2021</span><span>ismir tutorial</span>
-                                </p>
+                                <p class="project-meta"><span>web book</span></p>
                             </div>
                         </a>
 
                         <a class="project" href="https://llms-heart-mir.github.io/tutorial" target="_blank" rel="noopener">
-                            <img class="project-shot" src="assets/img/projects/llms-mir.jpg" alt="LLMs &lt;3 MIR web book title page" />
+                            <img class="project-shot project-shot--plate" src="assets/img/projects/llms-mir.png" alt="LLMs &lt;3 MIR tutorial logo" />
                             <div class="project-body">
-                                <h2 class="project-name">LLMs &lt;3 MIR</h2>
+                                <h2 class="project-name">LLMs &lt;3 MIR Tutorial</h2>
                                 <p class="project-desc">A web book on large language models for music information retrieval, written after a year of building with them and suffering from them.</p>
-                                <p class="project-meta">
-                                    <span>web book</span><span>2023</span>
-                                </p>
+                                <p class="project-meta"><span>web book</span></p>
                             </div>
                         </a>
                     </div>
