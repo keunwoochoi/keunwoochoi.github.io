@@ -17,7 +17,6 @@
     --accent: #2e7ec7;
     --rule:   #ebe7df;
     --thumbnail-bg: #96a3ad;
-    --physical-bg: #0b0d11;
 }
 
 body.projects-page {
@@ -85,10 +84,11 @@ body.projects-page {
     background: var(--thumbnail-bg);
 }
 
-.project-shot--physical {
+.project-shot--brand {
     object-fit: contain;
     object-position: center;
-    background: var(--physical-bg);
+    background: var(--thumbnail-bg);
+    padding: 1.5rem;
 }
 
 /* Body fills the remaining height so the meta strip lands on the same
@@ -183,6 +183,10 @@ body.projects-page {
     border-right: 1px solid var(--rule);
 }
 
+.project--lead .project-shot--brand {
+    height: 340px;
+}
+
 .project--lead .project-body {
     align-self: center;
     padding: 1.75rem 1.9rem;
@@ -241,6 +245,9 @@ body.projects-page {
         min-height: 0;
         border-right: 0;
         border-bottom: 1px solid var(--rule);
+    }
+    .project--lead .project-shot--brand {
+        height: auto;
     }
     .project--lead .project-body {
         padding: 1.15rem 1.3rem 1.35rem;
