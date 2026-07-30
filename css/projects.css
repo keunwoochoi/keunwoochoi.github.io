@@ -16,7 +16,7 @@
     --muted:  #7a736a;
     --accent: #2e7ec7;
     --rule:   #ebe7df;
-    --thumbnail-bg: #2e7ec7;
+    --thumbnail-bg: #435c71;
     --physical-bg: #0b0d11;
 }
 
@@ -76,7 +76,7 @@ body.projects-page {
 }
 
 /* Kapre's art is a 3:1 banner — contain it (rather than crop the wordmark in
-   half) on the same site blue as the logo tiles, so its letterbox bars match
+   half) on the same muted blue-gray as the logo tiles, so its letterbox bars match
    the rest of the grid. The logo tiles fill their frame exactly, so this
    background only shows on Kapre. */
 .project-shot--plate {
