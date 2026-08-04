@@ -208,32 +208,13 @@ body.projects-page {
 /* --- grid ---------------------------------------------------------------- */
 
 /* Two up. The min() keeps the 400px floor from overflowing screens narrower
-   than it. The wide physical-instruments.js card spans the first row, leaving
-   the four established projects as a clean 2x2 below. */
+   than it. The four JS synth/instrument packages form a clean 2x2, followed
+   by the four established projects as another 2x2 below. */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
     column-gap: 1.75rem;
     row-gap: 3rem;
-}
-
-.project--wide {
-    display: grid;
-    grid-column: 1 / -1;
-    grid-template-columns: 1fr 1.15fr;
-}
-
-.project--wide .project-shot {
-    height: 300px;
-    min-height: 260px;
-    aspect-ratio: auto;
-    border-right: 1px solid var(--rule);
-    border-bottom: 0;
-}
-
-.project--wide .project-body {
-    align-self: center;
-    padding: 1.5rem 1.6rem;
 }
 
 @media (max-width: 767px) {
@@ -255,19 +236,6 @@ body.projects-page {
     /* Still the largest title on the page, just scaled for the narrow column. */
     .project--lead .project-name {
         font-size: 1.9rem;
-    }
-    .project--wide {
-        grid-template-columns: 1fr;
-    }
-    .project--wide .project-shot {
-        height: auto;
-        aspect-ratio: 16 / 10;
-        min-height: 0;
-        border-right: 0;
-        border-bottom: 1px solid var(--rule);
-    }
-    .project--wide .project-body {
-        padding: 1.15rem 1.3rem 1.35rem;
     }
     .projects-title {
         font-size: 1.7rem;
