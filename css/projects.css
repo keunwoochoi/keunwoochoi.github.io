@@ -3,7 +3,7 @@
 
    Palette, type and paper are inherited from the blog reading styles so the
    two pages read as one site. The one device specific to this page is the
-   monospace meta strip on each card: a kind label and a year, separated by
+   monospace meta strip on each card: a kind label and a release date, separated by
    space (no punctuation). It says what sort of artifact each project is and
    when it lived.
    ========================================================================== */
@@ -146,8 +146,8 @@ body.projects-page {
     color: inherit;
 }
 
-/* Kind label + year as a lowercase monospace footer row — kind slug at the
-   left edge, year at the right, no punctuation between them. Lowercase and
+/* Kind label + release date as a lowercase monospace footer row — kind slug at the
+   left edge, release date at the right, no punctuation between them. Lowercase and
    untracked on purpose, to read like a code slug rather than a tracked-out
    uppercase tag. */
 .project-meta {
